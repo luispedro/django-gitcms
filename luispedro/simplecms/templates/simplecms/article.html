@@ -1,5 +1,9 @@
 {% extends "base.html" %}
+{% load markup %}
 {% block title %}{{ article.title }}{% endblock %}
 {% block content %}
 {{ article.content|restructuredtext }}
+{% for cat in article.categories.all %}
+    {{ cat.name }}
+{% endfor %}
 {% endblock %}
