@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="/media/style/base.css" />
+    <title>{% block title %}Lu&iacute;s Pedro Coelho{% endblock %}</title>
+    <script type="text/javascript" src="/media/js/jquery.js"></script>
+    {% endblock %}
+</head>
+
+<body>
+<div id="all">
+    <div id="sidebar">
+        {% block sidebar %}
+            {% show_menu "Main Menu" "unordered-list" %}
+        {% endblock %}
+    </div>
+
+    {% block breadcrumbs %}
+    {% endblock breadcrumbs %}
+
+    {% autoescape off %}
+        <div id="content">
+            {% block content %}
+                My content
+            {% endblock %}
+        </div>
+    {% endautoescape %}
+
+    <div id="footer"> 
+        {% block footer %}
+            Copyright (c) 2009. Website design by Lu&iacute;s Pedro Coelho. All rights reserved.
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>
