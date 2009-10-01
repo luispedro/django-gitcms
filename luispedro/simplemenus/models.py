@@ -1,14 +1,15 @@
 from django.db import models
+from django.utils.translation import ugettext as tr
 
 class MenuItem(models.Model):
-    name = models.CharField(t('Name'), max_length=255)
-    url = models.CharField(t('url'), max_length=255)
+    name = models.CharField(tr('Name'), max_length=255)
+    url = models.CharField(tr('url'), max_length=255)
     parent = models.ForeignKey('self', related_name='children', null=True)
 
 class Menu(models.Model):
-    name = models.CharField(t('Name'), max_length=255)
+    name = models.CharField(tr('Name'), max_length=255)
     fake_root = models.ForeignKey(MenuItem)
-    def _get_items(self):
-        return self.items.children.all()
-    items = property(_get_items)
+    def _get_children(self):
+        return self.fake_root.children.all()
+    children = property(_get_children)
 

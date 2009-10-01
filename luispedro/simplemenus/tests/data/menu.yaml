@@ -1,0 +1,10 @@
+name: Main Menu
+children:
+    -   name: Software
+        url: software/
+        children:
+            -   name: Milk
+                url: software/milk
+            -   name: Jug
+                url: software/jug
+

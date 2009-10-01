@@ -7,6 +7,7 @@ TEMPLATE_DEBUG = DEBUG
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
+TEST_RUNNER = 'django_nose.run_tests'
 
 MANAGERS = ADMINS
 
@@ -86,4 +87,6 @@ INSTALLED_APPS = (
     'django.contrib.markup',
 
     'simplecms',
+    'simplemenus',
 )
+
