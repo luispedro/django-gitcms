@@ -1,10 +1,9 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
+import luispedro.simplecms.urls
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^luispedro/', include('luispedro.foo.urls')),
-
     (r'^admin/', include(admin.site.urls)),
 )
+urlpatterns += luispedro.simplecms.urls.urlpatterns

@@ -8,8 +8,8 @@ class Category(models.Model):
 
 class Article(models.Model):
     title = models.CharField(u'title', max_length=255)
-    slug = models.SlugField(u'slug', max_length=255)
+    url = models.CharField(u'url', max_length=255)
     categories = models.ManyToManyField(Category)
     content = models.TextField(u'content')
     def __unicode__(self):
-        return self.title
+        return '%s (%s)' % (self.title, self.url)

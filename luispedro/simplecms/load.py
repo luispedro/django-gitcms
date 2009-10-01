@@ -39,7 +39,7 @@ def loaddir(directory, clear=False):
             raise InputError, 'Blank line expected'
         content = _precontent
         content += input.read()
-        A = Article(title=header['title'], slug=header['slug'], content=content)
+        A = Article(title=header['title'], url=header['url'], content=content)
         A.save()
         for c in header.get('categories','').split():
             A.categories.add(categories[c])
