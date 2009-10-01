@@ -2,14 +2,13 @@
     <ul class='menu'>
     {% for item in items %}
         <li class='menu-item'><a href="{{ item.url }}">{{ item.name }}</a></li>
-        {% if item.expanded %}
         {% if item.children %}
             <ul class='submenu'>
-            {% for itemitem in item.children %}
+            {% for itemitem in item.children.all %}
                 <li class='submenu-item'><a href="{{ itemitem.url }}">{{ itemitem.name }}</a></li>
             {% endfor %}
             </ul>
         {% endif %}
-        {% endif %}
+    {% endfor %}
     </ul>
 {% endif %}
