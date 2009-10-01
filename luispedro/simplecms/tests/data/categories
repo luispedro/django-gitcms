@@ -1,0 +1,6 @@
+- 
+    name: News
+    slug: news
+-
+    name: Category
+    slug: category
