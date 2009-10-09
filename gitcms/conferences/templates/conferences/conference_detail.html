@@ -1,0 +1,9 @@
+<div class='conference'>
+    <p><strong>{{ conference.name }}</strong><br />
+        {{ conference.location }}<br />
+        {{ conference.start }} to {{ conference.end }}<br />
+        {% if conference.submission_deadline %}
+            <i>Submission deadline</i>: {{ conference.submission_deadline }}
+        {% endif %}
+    </p>
+</div>
