@@ -1,39 +1,45 @@
 {% load simplemenu_tags %}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     {% block head %}
-    <link rel="stylesheet" href="/media/style/luispedro.css" type="text/css" />
     <title>{% block title %}Lu&iacute;s Pedro Coelho{% endblock %}</title>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
     <script type="text/javascript" src="/media/js/jquery.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href="/media/style/style.css" rel="stylesheet" type="text/css" />
     {% endblock %}
 </head>
-
 <body>
-<div id="all">
-    <div id="sidebar">
-        {% block sidebar %}
-            {% show_menu "Main Menu" %}
-        {% endblock %}
-    </div>
+<div id="Header">
+    {% block topbar %}
+        {% show_menu "Top Menu" %}
+    {% endblock %}
+</div>
+<div id="header2">
+  <div class="logo">{% block logo %}luispedro.org{% endblock %}</div>
+  <div class="banner"><span>{% block tagline %}computational biology &amp;c{% endblock %}</span></div>
+</div>
 
-    {% block breadcrumbs %}
-    {% endblock breadcrumbs %}
-
-    {% autoescape off %}
-        <div id="content">
+{% autoescape off %}
+        <div id="Content">
             {% block content %}
                 My content
             {% endblock %}
         </div>
-    {% endautoescape %}
+{% endautoescape %}
 
-    <div id="footer"> 
+<div id="Menu">
+  {% block sidebar %}
+    {% show_menu "Main Menu" %}
+  {% endblock %}
+</div>
+<div class="spacer">&nbsp;</div>
+<div class="footer">
         {% block footer %}
-            Copyright (c) 2009. Website design by Lu&iacute;s Pedro Coelho. All rights reserved.
+            Copyright (c) 2009. Lu&iacute;s Pedro Coelho. All rights reserved.<br />
+            Website Graphical Design by : <a href="http://ramblingsoul.com">Rambling Soul</a>| <a href="http://validator.w3.org/check?uri=referer">XHTML 1.0</a> | CSS</p>
         {% endblock %}
-    </div>
 </div>
 </body>
 </html>
