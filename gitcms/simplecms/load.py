@@ -36,7 +36,7 @@ def loaddir(directory, clear=False):
             header[tag] = value
         blank = input.readline()
         if blank.strip():
-            raise InputError, 'Blank line expected'
+            raise IOError, 'Blank line expected'
         content = _precontent
         content += input.read()
         A = Article(title=header['title'], url=header['url'], content=content)
