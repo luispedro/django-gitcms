@@ -159,6 +159,7 @@ body>#header2 {height:115px;}
 	padding-right: 10px;
 	padding-bottom: 10px;
 	padding-left: 10px;
+    min-height: 400px;
 	}
 #header a {
 	color: #993300;
