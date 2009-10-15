@@ -90,5 +90,7 @@ INSTALLED_APPS = (
     'simplecms',
     'simplemenus',
     'conferences',
+    'files',
+    'publications',
 )
 

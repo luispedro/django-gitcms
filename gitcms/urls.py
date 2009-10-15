@@ -3,6 +3,7 @@ from django.conf.urls.defaults import *
 from django.contrib import admin
 import simplecms.urls
 import conferences.urls
+import publications.urls
 import files.urls
 admin.autodiscover()
 
@@ -12,4 +13,5 @@ urlpatterns = patterns('',
 )
 urlpatterns += files.urls.urlpatterns
 urlpatterns += conferences.urls.urlpatterns
+urlpatterns += publications.urls.urlpatterns
 urlpatterns += simplecms.urls.urlpatterns
