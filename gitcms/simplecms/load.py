@@ -28,15 +28,18 @@ def loaddir(directory, clear=False):
 
         input = file(directory + '/' + artfile)
         header = {}
+        linenr = 0
         while True:
             line = input.readline().strip()
+            linenr += 1
             if line == '..': break
             tag,value = line.split(':')
             value = value.strip()
             header[tag] = value
         blank = input.readline()
+        linenr += 1
         if blank.strip():
-            raise IOError, 'Blank line expected'
+            raise IOError, 'Blank line expected while processing file (%s:%s)\nGot "%s"' % (artfile, linenr,blank)
         content = _precontent
         content += input.read()
         A = Article(title=header['title'], url=header['url'], content=content)
