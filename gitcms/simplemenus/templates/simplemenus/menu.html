@@ -1,7 +1,6 @@
 {% if items %}
-    <ul class='menu'>
     {% for item in items %}
-        <li class='menu-item'><a href="{{ item.url }}">{{ item.name }}</a></li>
+        <h2>{{ item.name }}</h2>
         {% if item.children %}
             <ul class='submenu'>
             {% for itemitem in item.children.all %}
@@ -10,5 +9,4 @@
             </ul>
         {% endif %}
     {% endfor %}
-    </ul>
 {% endif %}

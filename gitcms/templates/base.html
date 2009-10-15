@@ -11,9 +11,9 @@
     {% endblock %}
 </head>
 <body>
-<div id="Header">
+<div id="header">
     {% block topbar %}
-        {% show_menu "Top Menu" %}
+        {% show_tabs "Top Menu" %}
     {% endblock %}
 </div>
 <div id="header2">
@@ -22,14 +22,14 @@
 </div>
 
 {% autoescape off %}
-        <div id="Content">
+        <div id="content">
             {% block content %}
                 My content
             {% endblock %}
         </div>
 {% endautoescape %}
 
-<div id="Menu">
+<div id="menu">
   {% block sidebar %}
     {% show_menu "Main Menu" %}
   {% endblock %}

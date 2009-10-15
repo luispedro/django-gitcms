@@ -20,7 +20,7 @@ h1 {
 	margin-bottom: 10px;
 	margin-left: 0px;
 	}
-#Content h2 {
+#content h2 {
 	font-family: "Century Gothic", Arial;
 	font-size: 17px;
 	text-align: center;
@@ -54,20 +54,27 @@ p {
 	line-height: 25px;
 	color: #000000;
 	}
-#Content>p {margin:0px;}
-#Content>p+p {text-indent:30px;}
+#content>p {
+    margin:0px;
+}
+#content>p+p {
+    text-indent:30px;
+}
 
 a {
 	color:#CC6600;
 	text-decoration:none;
 	font-weight:600;
 	font-family:verdana, arial, helvetica, sans-serif;
-	}
-a:visited {color:#07a;}
-#Header #navigation li {
+}
+
+a:visited {
+    color:#07a;
+}
+#header #navigation li {
 	display: inline;
 }
-#Header #navigation a {
+#header #navigation a {
 	background-image: url(/media/images/ramblingsoul3/menu.png);
 	background-repeat: no-repeat;
 	float: left;
@@ -86,7 +93,7 @@ a:visited {color:#07a;}
 
 a:hover {}
 
-#Header {
+#header {
 	height:42px; 
 	line-height:11px;
 	voice-family: "\"}\"";
@@ -126,7 +133,7 @@ a:hover {}
 }
 
 
-body>#Header {height:42px;}
+body>#header {height:42px;}
 blockquote p {
 	color: #CC6600;
 	line-height: 18px;
@@ -141,9 +148,9 @@ blockquote p {
 	background-repeat: repeat-x;
 	height: 115px;
 }
-body>#Header2 {height:115px;}
+body>#header2 {height:115px;}
 
-#Content {
+#content {
 	background-color: #FFFFFF;
 	margin-top: 20px;
 	margin-right: 20px;
@@ -153,12 +160,12 @@ body>#Header2 {height:115px;}
 	padding-bottom: 10px;
 	padding-left: 10px;
 	}
-#Header a {
+#header a {
 	color: #993300;
 }
 
 
-#Menu {
+#menu {
 	position:absolute;
 	top:82px;
 	left:20px;
@@ -175,17 +182,17 @@ body>#Header2 {height:115px;}
 	padding-left: 10px;
 	}
 /* Again, "be nice to Opera 5". */
-body>#Menu {width:210px;}
-    #tabs {
+body>#menu {width:210px;}
+#tabs {
 	font-size:93%;
 	line-height:normal;
 	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
 	width: 700px;
-      }
+}
 
-#Header #tabs .font {
+#header #tabs .font {
 	display: block;
 	float: left;
 	color: #FFFFFF;
@@ -203,7 +210,7 @@ body>#Menu {width:210px;}
 	padding-top: 0px;
 	text-align: center;
       }
-#Header #tabs .font1 a {
+#header #tabs .font1 a {
 	font-family: "Century Gothic", Arial;
 	font-size: 12px;
 	font-weight: bold;
@@ -215,11 +222,11 @@ body>#Menu {width:210px;}
 	width: 43px;
 	padding-top: 13px;
 }
-#Header #tabs .font2 a:hover {
+#header #tabs .font2 a:hover {
 	color: #00CCFF;
 	background-color: #006699;
 }
-#Header #tabs .font2 a {
+#header #tabs .font2 a {
 	font-family: "Century Gothic", Arial;
 	font-size: 14px;
 	font-weight: bold;
@@ -231,7 +238,7 @@ body>#Menu {width:210px;}
 	width: 43px;
 	padding-top: 10px;
 }
-#Header #tabs .font3 a {
+#header #tabs .font3 a {
 	font-family: "Century Gothic", Arial;
 	font-size: 16px;
 	font-weight: bold;
@@ -258,7 +265,7 @@ body>#Menu {width:210px;}
 	color: #4480C8;
 	font-weight: bold;
 }
-#Header #tabs .activemenu a {
+#header #tabs .activemenu a {
 	color: #A3B083;
 }
 
@@ -275,7 +282,7 @@ body>#Menu {width:210px;}
 	margin-right: 5px;
 	margin-left: 5px;
       }
-#Header #tabs li a {
+#header #tabs li a {
 	padding-right: 5px;
 	padding-left: 5px;
 	color: #FFFFFF;
@@ -285,11 +292,11 @@ body>#Menu {width:210px;}
 	margin-right: 3px;
 	margin-left: 3px;
 }
-#Header #tabs a:hover {
+#header #tabs a:hover {
 	color: #006600;
 	text-decoration: none;
 }
-	#mainright {
+#mainright {
 	width:32%;
 	float:left;
 	padding-bottom:110px;
@@ -299,9 +306,9 @@ body>#Menu {width:210px;}
 	background-image: url(/media/images/ramblingsoul3/mcbg.png);
 	background-repeat: no-repeat;
 	background-position: right bottom;
-		}
+}
 	
-	#maincenter {
+#maincenter {
 	width:32%;
 	float:left;
 	padding-bottom:110px;
@@ -332,10 +339,15 @@ body>#Menu {width:210px;}
 	background-position: right bottom;
 		}
 	
-	#banner {
-		}
-	#banner h1 { margin:0px; padding:10px}
-#Menu h2 {
+#banner {
+}
+
+#banner h1 {
+    margin:0px;
+    padding:10px;
+}
+
+#menu h2 {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 18px;
 	display: block;
@@ -344,12 +356,12 @@ body>#Menu {width:210px;}
 	color: #669933;
 	font-weight: normal;
 }
-#Menu .subnav {
+#menu .submenu {
 	margin: 0px;
 	padding: 0px;
 	list-style-type: none;
 }
-#Menu .subnav li {
+li.submenu-item {
 	display: block;
 	margin-top: 0px;
 	margin-right: 0px;
@@ -359,18 +371,18 @@ body>#Menu {width:210px;}
 	border-bottom-style: dashed;
 	border-bottom-color: #D8D3B9;
 }
-#Menu .subnav a {
+#menu .submenu a {
 	font-weight: normal;
 	color: #CC6633;
 }
 
 
 
-#Header #tabs .font1 a:hover {
+#header #tabs .font1 a:hover {
 	color: #00CCFF;
 	background-color: #006699;
 }
-#Header #tabs .font3 a:hover {
+#header #tabs .font3 a:hover {
 	color: #00CCFF;
 	background-color: #006699;
 }
@@ -398,7 +410,7 @@ body>#Menu {width:210px;}
     font-weight: normal;
     src: url(GUNNYHA1.eot);
   }
-#Content blockquote {
+#content blockquote {
 	margin: 10px;
 	color: #996633;
 	text-decoration: none;
@@ -418,7 +430,7 @@ body>#Menu {width:210px;}
 	margin: 0px;
 	padding: 0px;
 }
-#Header #navigation a:hover {
+#header #navigation a:hover {
 	background-image: url(/media/images/ramblingsoul3/menu-hvr.png);
 	background-repeat: no-repeat;
 	float: left;
@@ -434,7 +446,7 @@ body>#Menu {width:210px;}
 	font-weight: normal;
 	text-decoration: none;
 }
-#Header #navigation .active a {
+#header #navigation .active a {
 
 	background-image: url(/media/images/ramblingsoul3/menu-hvr.png);
 	background-repeat: no-repeat;
@@ -451,11 +463,11 @@ body>#Menu {width:210px;}
 	font-weight: normal;
 	text-decoration: none;
 }
-#Menu .subnav a:visited,active {
+#menu .submenu a:visited,active {
 	font-weight: normal;
 	color: #CC6633;
 }
-#Menu .subnav a:hover {
+#menu .submenu a:hover {
 	font-weight: normal;
 	color: #000000;
 	background-color: #F6F6EE;
