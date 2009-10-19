@@ -62,14 +62,12 @@ TEMPLATE_LOADERS = (
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.doc.XViewMiddleware',
     'django.middleware.cache.CacheMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'redirect.middleware.RedirectMiddleware',
 )
 
 ROOT_URLCONF = 'gitcms.urls'
@@ -92,5 +90,7 @@ INSTALLED_APPS = (
     'conferences',
     'files',
     'publications',
+    'redirect',
 )
+
 
