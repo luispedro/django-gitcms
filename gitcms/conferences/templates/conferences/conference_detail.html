@@ -1,9 +1,13 @@
 <div class='conference'>
-    <p><strong>{{ conference.name }}</strong><br />
-        {{ conference.location }}<br />
-        {{ conference.start }} to {{ conference.end }}<br />
-        {% if conference.submission_deadline %}
-            <i>Submission deadline</i>: {{ conference.submission_deadline }}
-        {% endif %}
+    {% if conference.url %}
+        <p><a href="{{ conference.url }}"><strong>{{ conference.name }}</strong></a><br />
+    {% else %}
+        <p><strong>{{ conference.name }}</strong><br />
+    {% endif %}
+    <em>{{ conference.location }}</em><br />
+    {{ conference.start }} to {{ conference.end }}<br />
+    {% if conference.submission_deadline %}
+        <i>Submission deadline</i>: {{ conference.submission_deadline }}
+    {% endif %}
     </p>
 </div>

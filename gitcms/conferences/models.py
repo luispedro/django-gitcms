@@ -7,6 +7,7 @@ class Conference(models.Model):
     start = models.DateField(u'Start')
     end = models.DateField(u'End')
     submission_deadline = models.DateField(u'Submission Deadline', blank=True, null=True)
+    url = models.URLField(u'URL', blank=True, null=True)
     comment = models.TextField(u'Comment')
     def __unicode__(self):
         return self.name
