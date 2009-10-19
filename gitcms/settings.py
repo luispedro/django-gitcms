@@ -8,6 +8,7 @@ ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
 TEST_RUNNER = 'django_nose.run_tests'
+APPEND_SLASH = True
 
 MANAGERS = ADMINS
 
