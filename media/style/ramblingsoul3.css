@@ -79,7 +79,7 @@ a:visited {
 	background-repeat: no-repeat;
 	float: left;
 	height: 32px;
-	width: 82px;
+	width: 102px;
 	margin-right: 5px;
 	padding-top: 10px;
 	text-align: center;
@@ -220,7 +220,7 @@ body>#menu {width:210px;}
 	display: block;
 	float: left;
 	height: 30px;
-	width: 43px;
+	width: 53px;
 	padding-top: 13px;
 }
 #header #tabs .font2 a:hover {
@@ -236,7 +236,7 @@ body>#menu {width:210px;}
 	display: block;
 	float: left;
 	height: 33px;
-	width: 43px;
+	width: 53px;
 	padding-top: 10px;
 }
 #header #tabs .font3 a {
@@ -247,7 +247,7 @@ body>#menu {width:210px;}
 	text-decoration: none;
 	display: block;
 	height: 30px;
-	width: 43px;
+	width: 53px;
 	padding-top: 10px;
 	float: left;
 }
@@ -436,7 +436,7 @@ li.submenu-item {
 	background-repeat: no-repeat;
 	float: left;
 	height: 32px;
-	width: 82px;
+	width: 102px;
 	margin-right: 5px;
 	padding-top: 10px;
 	text-align: center;
