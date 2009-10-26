@@ -1,4 +1,5 @@
 from django.shortcuts import render_to_response
+from django.http import HttpResponseRedirect
 
 def publications(request, collection):
     if collection == '__history__.html':
@@ -11,3 +12,8 @@ def publications(request, collection):
                 {
                     'collection' : collection,
                 })
+
+def papers(request, paper):
+    if paper == '':
+        return HttpResponseRedirect('/publications/')
+    return HttpResponseRedirect('/media/' + paper)
