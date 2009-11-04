@@ -11,4 +11,4 @@ class RedirectMiddleware(object):
         redirect = Redirect.objects.filter(source=path)
         if not redirect:
             return None
-        return HttpResponsePermanentRedirect(redirect[0].target)
+        return HttpResponsePermanentRedirect('/'+redirect[0].target)
