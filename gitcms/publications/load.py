@@ -14,7 +14,10 @@ _jsfilesdir = '../media/bibtex-json'
 def _bibtex2json(bibtexfname):
     datagen, headers = multipart_encode({'file': file(bibtexfname) })
     request = urllib2.Request("http://simile.mit.edu/babel/translator?reader=bibtex&writer=bibtex-exhibit-json", datagen, headers)
-    return urllib2.urlopen(request).read()
+    ans = urllib2.urlopen(request)
+    if ans.getcode() != 200:
+        raise IOError, 'publications.load: simile remote call failed'
+    return ans.read()
 
 def _maybemkdir(dirname):
     try:
