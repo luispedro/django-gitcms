@@ -3,6 +3,7 @@ from django.utils.translation import ugettext as tr
 
 class MenuItem(models.Model):
     name = models.CharField(tr('Name'), max_length=255)
+    title = models.CharField(tr('Title'), max_length=255, null=True)
     url = models.CharField(tr('url'), max_length=255)
     parent = models.ForeignKey('self', related_name='children', null=True)
 

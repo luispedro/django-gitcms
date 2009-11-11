@@ -11,7 +11,7 @@ def loaddir(directory, clear=False):
         if 'children' not in parent:
             return
         for ch in parent['children']:
-            child = MenuItem(name=ch['name'], url=ch['url'], parent=parent_obj)
+            child = MenuItem(name=ch['name'], url=ch['url'], title=ch.get('title', None), parent=parent_obj)
             child.save()
             _parse_children(ch, child)
     for menufile in os.listdir(directory):

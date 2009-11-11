@@ -4,7 +4,7 @@
         {% if item.children %}
             <ul class='submenu'>
             {% for itemitem in item.children.all %}
-                <li class='submenu-item'><a href="{{ itemitem.url }}">{{ itemitem.name }}</a></li>
+                <li class='submenu-item'><a href="{{ itemitem.url }}" title="{{ itemitem.title }}">{{ itemitem.name }}</a></li>
             {% endfor %}
             </ul>
         {% endif %}
