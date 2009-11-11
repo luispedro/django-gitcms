@@ -96,3 +96,4 @@ INSTALLED_APPS = (
 
 
 GITDJANGO_DIRNAME = '../website.content'
+from local_settings import *
