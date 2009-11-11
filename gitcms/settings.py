@@ -95,3 +95,4 @@ INSTALLED_APPS = (
 )
 
 
+GITDJANGO_DIRNAME = '../website.content'
