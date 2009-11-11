@@ -1,5 +1,6 @@
 from models import Article, Category
 import os
+from os import path
 import yaml
 
 _precontent = '''\
@@ -22,11 +23,19 @@ def loaddir(directory, clear=False):
         C.save()
         categories[cat['slug']] = C
 
-    for artfile in os.listdir(directory):
+    queue = os.listdir(directory)
+    while queue:
+        artfile = queue.pop()
         if artfile[0] == '.': continue
-        if artfile == 'categories': continue
+        if artfile in ('categories', 'template'): continue
+        artfile = path.join(directory, artfile)
+        if path.isdir(artfile):
+            queue.extend([
+                path.join(artfile,f) for f in os.listdir(artfile)
+                ])
+            continue
 
-        input = file(directory + '/' + artfile)
+        input = file(artfile)
         header = {}
         linenr = 0
         while True:
