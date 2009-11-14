@@ -2,8 +2,11 @@
 {% load markup %}
 {% block title %}{{ article.title }}{% endblock %}
 {% block content %}
-{{ article.content|restructuredtext }}
+{{ article.content }}
+
+<p>Article filed in categories:
 {% for cat in article.categories.all %}
     {{ cat.name }}
 {% endfor %}
+</p>
 {% endblock %}

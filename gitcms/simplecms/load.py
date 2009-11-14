@@ -2,6 +2,10 @@ from models import Article, Category
 import os
 from os import path
 import yaml
+import settings
+from docutils.core import publish_parts
+from django.utils.encoding import smart_str, force_unicode
+from django.utils.safestring import mark_safe
 
 _precontent = '''\
 **********
@@ -12,6 +16,15 @@ Fake Subtitle
 +++++++++++++
 
 '''
+
+
+def _preprocess(value):
+    # This is adapted from django source
+    value = _precontent + value
+    docutils_settings = getattr(settings, "RESTRUCTUREDTEXT_FILTER_SETTINGS", {})
+    parts = publish_parts(source=smart_str(value), writer_name="html4css1", settings_overrides=docutils_settings)
+    return mark_safe(force_unicode(parts["fragment"]))
+
 
 def loaddir(directory, clear=False):
     if clear:
@@ -49,8 +62,8 @@ def loaddir(directory, clear=False):
         linenr += 1
         if blank.strip():
             raise IOError, 'Blank line expected while processing file (%s:%s)\nGot "%s"' % (artfile, linenr,blank)
-        content = _precontent
-        content += input.read()
+        content = input.read()
+        content = _preprocess(content)
         A = Article(title=header['title'], url=header['url'], content=content)
         A.save()
         for c in header.get('categories','').split():
