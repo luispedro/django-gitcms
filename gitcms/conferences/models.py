@@ -11,3 +11,6 @@ class Conference(models.Model):
     comment = models.TextField(u'Comment')
     def __unicode__(self):
         return self.name
+
+    def summary(self):
+        return '%s (%s)' % (self.name, self.short_name)
