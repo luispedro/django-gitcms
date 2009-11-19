@@ -25,7 +25,10 @@ def upcomingical(request):
 
     Returns the calendar of conferences as an ical file.
     '''
-    import vobject
+    try:
+        import vobject
+    except ImportError:
+        return HttpResponse('import vobject failed in confereces/views.py:upcomingical')
     def _add_event(summary, start, end=None):
         if end is None:
             end = start
