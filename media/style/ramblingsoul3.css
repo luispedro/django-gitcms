@@ -396,30 +396,32 @@ li.submenu-item {
 	color: #00CCFF;
 	background-color: #006699;
 }
-  @font-face {
+/*
+@font-face {
     font-family: Century Gothic;
     font-style:  normal;
     font-weight: 700;
     src: url(CENTURY3.eot);
-  }
-  @font-face {
+}
+@font-face {
     font-family: Century Gothic;
     font-style:  normal;
     font-weight: normal;
     src: url(CENTURY4.eot);
-  }
-  @font-face {
+}
+@font-face {
     font-family: Verdana;
     font-style:  normal;
     font-weight: normal;
     src: url(VERDANA0.eot);
-  }
-  @font-face {
+}
+@font-face {
     font-family: Gunny Handwriting;
     font-style:  normal;
     font-weight: normal;
     src: url(GUNNYHA1.eot);
-  }
+}
+*/
 #content blockquote {
 	margin: 10px;
 	color: #996633;
