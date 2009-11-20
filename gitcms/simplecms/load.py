@@ -55,7 +55,7 @@ def loaddir(directory, clear=False):
             line = input.readline().strip()
             linenr += 1
             if line == '..': break
-            tag,value = line.split(':')
+            tag,value = line.split(':',1)
             value = value.strip()
             header[tag] = value
         blank = input.readline()
