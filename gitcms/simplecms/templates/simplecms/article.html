@@ -1,12 +1,14 @@
 {% extends "base.html" %}
-{% load markup %}
+{% block extra_head %}
+<meta name="keywords" content="{% for cat in articles.categories.all %}{{ cat.name }}, {% endfor %}" />
+{% endblock %}
 {% block title %}{{ article.title }}{% endblock %}
 {% block content %}
 {{ article.content }}
 
 <p>Article filed in categories:
 {% for cat in article.categories.all %}
-    {{ cat.name }}
+    <a href="/category/{{ cat.slug }}">{{ cat.name }}</a>
 {% endfor %}
 </p>
 {% endblock %}

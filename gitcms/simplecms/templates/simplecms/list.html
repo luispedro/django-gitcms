@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load markup %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block content %}
+
+<h1>{{ pagetitle }}</h1>
+
+
+{% for art in articles %}
+    <div style="padding: 1em; background: #eee; border: 1px solid dashed">
+        <h2><a href="/{{ art.url }}">{{ art.title }}</a></h2>
+
+        {{ art.content|truncatewords_html:20 }}
+
+
+        <p style="text-align: right; padding-top: -1em;">Read <a href="/{{ art.url }}">full article</a></p>
+    </div>
+
+    <div style="height: 5em; clear: both">
+    </div>
+{% endfor %}
+
+{% endblock %}
