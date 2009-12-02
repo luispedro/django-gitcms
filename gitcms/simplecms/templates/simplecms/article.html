@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block extra_head %}
-<meta name="keywords" content="{% for cat in articles.categories.all %}{{ cat.name }}, {% endfor %}" />
+<meta name="keywords" content="{% for cat in article.categories.all %}{{ cat.name }}, {% endfor %}" />
 {% endblock %}
 {% block title %}{{ article.title }}{% endblock %}
 {% block content %}
