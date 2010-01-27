@@ -1,13 +1,14 @@
-from .models import Article, Category
+from simpletagging.models import Tag
+from simplecms.models import Article
 from django.shortcuts import get_object_or_404, render_to_response
 
-def bycategory(request, category):
-    category =get_object_or_404(Category, slug=category)
-    articles = Article.objects.filter(categories=category)
+def bytag(request, tag):
+    tag = get_object_or_404(Tag, slug=tag)
+    articles = Article.objects.filter(tags=tag)
     return render_to_response(
                 'simplecms/list.html',
                 {
-                    'pagetitle' : ('Articles in category %s' % category.name),
+                    'pagetitle' : ('Articles tagged %s' % tag.name),
                     'articles' : articles,
                 })
 

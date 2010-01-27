@@ -2,6 +2,6 @@ from django.conf.urls.defaults import *
 import views
 
 urlpatterns = patterns('',
-    (r'^category/(?P<category>.*)/?', views.bycategory),
+    (r'^tag/(?P<tag>.*)/?', views.bytag),
     (r'^(?P<url>.*)/?', views.article),
 )

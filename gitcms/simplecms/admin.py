@@ -1,4 +1,3 @@
-from models import Category, Article
+from models import Article
 from django.contrib import admin
-admin.site.register(Category)
 admin.site.register(Article)

@@ -1,4 +1,4 @@
-from models import Article, Category
+from models import Article
 import os
 from os import path
 import yaml
@@ -6,6 +6,7 @@ import settings
 from docutils.core import publish_parts
 from django.utils.encoding import smart_str, force_unicode
 from django.utils.safestring import mark_safe
+from simpletagging.models import tag_for
 
 _precontent = '''\
 **********
@@ -28,13 +29,7 @@ def _preprocess(value):
 
 def loaddir(directory, clear=False):
     if clear:
-        Category.objects.all().delete()
         Article.objects.all().delete()
-    categories = {}
-    for cat in yaml.load(file(directory + '/categories')):
-        C = Category(name=cat['name'], slug=cat['slug'])
-        C.save()
-        categories[cat['slug']] = C
 
     queue = os.listdir(directory)
     while queue:
@@ -67,5 +62,7 @@ def loaddir(directory, clear=False):
         A = Article(title=header['title'], url=header['url'], content=content)
         A.save()
         for c in header.get('categories','').split():
-            A.categories.add(categories[c])
+            A.tags.add(tag_for(c))
+
+dependencies = ['tag']
 

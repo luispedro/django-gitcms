@@ -7,8 +7,8 @@
 {{ article.content }}
 
 <p>Article filed in categories:
-{% for cat in article.categories.all %}
-    <a href="/category/{{ cat.slug }}">{{ cat.name }}</a>
+{% for tag in article.tags.all %}
+    <a href="/category/{{ tag.slug }}">{{ tag.name }}</a>
 {% endfor %}
 </p>
 {% endblock %}
