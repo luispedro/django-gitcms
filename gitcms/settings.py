@@ -89,6 +89,7 @@ INSTALLED_APPS = (
     'simpletagging',
     'simplecms',
     'simplemenus',
+    'books',
     'conferences',
     'files',
     'publications',

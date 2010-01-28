@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block extra_head %}
+<meta name="keywords" content="{% for tag in book.tags.all %}{{ tag.name }}, {% endfor %}" />
+{% endblock %}
+{% block title %}{{ book.title }}{% endblock %}
+{% block content %}
+{{ book.content }}
+
+<p>Book tagged as:
+{% for cat in book.tags.all %}
+    <a href="/books-by-tag/{{ tag.slug }}">{{ tag.name }}</a>
+{% endfor %}
+</p>
+{% endblock %}

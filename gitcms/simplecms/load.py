@@ -19,7 +19,7 @@ Fake Subtitle
 '''
 
 
-def _preprocess(value):
+def preprocess_rst_content(value):
     # This is adapted from django source
     value = _precontent + value
     docutils_settings = getattr(settings, "RESTRUCTUREDTEXT_FILTER_SETTINGS", {})
@@ -58,7 +58,7 @@ def loaddir(directory, clear=False):
         if blank.strip():
             raise IOError, 'Blank line expected while processing file (%s:%s)\nGot "%s"' % (artfile, linenr,blank)
         content = input.read()
-        content = _preprocess(content)
+        content = preprocess_rst_content(content)
         A = Article(title=header['title'], url=header['url'], content=content)
         A.save()
         for c in header.get('categories','').split():
