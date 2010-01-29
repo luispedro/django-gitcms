@@ -35,4 +35,4 @@ def loaddir(directory, clear=False):
         for c in header.get('tags','').split():
             B.tags.add(tag_for(c))
 
-dependencies = ['tag']
+dependencies = ['simpletagging']

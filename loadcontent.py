@@ -26,5 +26,5 @@ for app in listdir(datadir):
         import warnings
         warnings.warn("Don't know how to import '%s'" % app)
 
-for loaddir,app in queue:
+for loaddir,app in reversed(queue):
     loaddir(path.join(datadir, app), clear=True)
