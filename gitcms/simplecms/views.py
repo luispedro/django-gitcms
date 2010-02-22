@@ -1,5 +1,5 @@
-from simpletagging.models import Tag
-from simplecms.models import Article
+from gitcms.simpletagging.models import Tag
+from gitcms.simplecms.models import Article
 from django.shortcuts import get_object_or_404, render_to_response
 
 def bytag(request, tag):

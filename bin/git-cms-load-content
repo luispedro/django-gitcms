@@ -1,6 +1,12 @@
-from os import listdir, path
+#!/bin/bash
+python manage.py shell<<EOF
+from os import listdir, getcwd, path
+import sys
+
+basedir = getcwd()
+sys.path.append(basedir)
 import settings
-basedir = path.abspath(path.dirname(__file__))
+
 datadir = path.join(basedir, settings.GITDJANGO_DIRNAME)
 datadir = path.abspath(datadir)
 
@@ -9,7 +15,8 @@ queued = set()
 for app in listdir(datadir):
     if app[0] == '.':
         continue
-    module = __import__(app,{},{},fromlist=['load'])
+    modname = 'gitcms.' + app
+    module = __import__(modname,{},{},fromlist=['load'])
     dependencies = getattr(module.load, 'dependencies', [])
     dependencies = set(dependencies)
     loaddir = getattr(module.load, 'loaddir', None)
@@ -22,9 +29,14 @@ for app in listdir(datadir):
                 idx += 1
             dep = queue[idx]
             del queue[idx]
+            queue.append(dep)
     else:
         import warnings
         warnings.warn("Don't know how to import '%s'" % app)
 
+
 for loaddir,app in reversed(queue):
     loaddir(path.join(datadir, app), clear=True)
+
+
+EOF

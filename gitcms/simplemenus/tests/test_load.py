@@ -1,5 +1,5 @@
-import simplemenus.load
-from simplemenus.models import Menu, MenuItem
+import gitcms.simplemenus.load
+from gitcms.simplemenus.models import Menu, MenuItem
 def test_simple_load():
     simplemenus.load.loadfile('simplemenus/tests/data/menu.yaml') 
     assert len(Menu.objects.all())

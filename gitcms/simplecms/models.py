@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as tr
-from simpletagging.models import Tag
+from gitcms.simpletagging.models import Tag
 
 class Article(models.Model):
     title = models.CharField(u'title', max_length=255)

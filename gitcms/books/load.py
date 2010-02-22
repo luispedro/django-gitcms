@@ -4,9 +4,9 @@ from os import path
 import yaml
 import time
 
-from parsedate import parsedate
-from simplecms.load import preprocess_rst_content
-from simpletagging.models import tag_for
+from gitcms.parsedate import parsedate
+from gitcms.simplecms.load import preprocess_rst_content
+from gitcms.simpletagging.models import tag_for
 
 def loaddir(directory, clear=False):
     if clear:

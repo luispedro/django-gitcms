@@ -6,7 +6,7 @@ import settings
 from docutils.core import publish_parts
 from django.utils.encoding import smart_str, force_unicode
 from django.utils.safestring import mark_safe
-from simpletagging.models import tag_for
+from gitcms.simpletagging.models import tag_for
 
 _precontent = '''\
 **********

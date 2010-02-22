@@ -1,7 +1,7 @@
 from django import template
 register = template.Library()
 
-from simplemenus.models import Menu
+from gitcms.simplemenus.models import Menu
 
 @register.inclusion_tag('simplemenus/menu.html')
 def show_menu(menu_name):
