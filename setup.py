@@ -40,9 +40,9 @@ for subpackage in ('publications', 'conferences', 'simplecms', 'simplemenus', 'b
     package_data['gitcms.' + subpackage] = ['templates/%s/*.html' % subpackage]
 
 
-setuptools.setup(name = 'Git-CMS',
+setuptools.setup(name = 'django-gitcms',
       version = '0.2',
-      description = 'GitCMS: A django based git-backed content management system',
+      description = 'Django Git CMS: A django based git-backed content management system',
       long_description = long_description,
       author = 'Luis Pedro Coelho',
       author_email = 'lpc@cmu.edu',
