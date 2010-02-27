@@ -1,0 +1,23 @@
+title: Example Website
+url: 
+categories: somecategory
+..
+
+Where Goes Content
+==================
+
+Just use restructured text.
+
+Including pictures:
+
+.. image:: /files/niagara-small.jpg
+   :alt: Luis Pedro Coelho
+   :class: float-right
+
+Or Lists
+========
+- Item one
+- Item two
+
+Here's a `link </one>`_
+

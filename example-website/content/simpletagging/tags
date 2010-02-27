@@ -1,0 +1,12 @@
+- 
+    name: Somewhere
+    slug: somecategory
+-
+    name: Software
+    slug: software
+-
+    name: Work
+    slug: work
+-
+    name: Python
+    slug: python

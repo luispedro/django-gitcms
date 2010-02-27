@@ -1,0 +1,23 @@
+#sidebar {
+    float: left;
+    padding: 2em;
+    max-width: 25%;
+}
+
+#content {
+    width: 70%;
+    float: right;
+    padding: 1em;
+    border: 1px dashed navy;
+}
+#footer {
+    clear: both;
+    text-align: center;
+    font-size: small;
+    font-style: italic;
+    padding-top: 1em;
+}
+
+H1 {
+    color: #ccc;
+}

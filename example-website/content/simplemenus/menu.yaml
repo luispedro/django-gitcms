@@ -1,0 +1,18 @@
+name: Main Menu
+children:
+    -   name: One
+        url: /one
+        children:
+        -   name: One
+            title: One Again
+            url: /one
+    -   name: Django Git CMS Stuff
+        url: http://luispedro.org/software/git-cms
+        children:
+        -   name: Home Page
+            title: Project Home Page
+            url: http://luispedro.org/software/git-cms
+        -   name: Author's Webpage
+            title: Luis Pedro Coelhos's Webpage
+            url: http://luispedro.org/
+

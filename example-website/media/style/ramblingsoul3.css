@@ -1,0 +1,486 @@
+/* Original http://ramblingsoul.com/ */
+body {
+	margin:0px;
+	padding:0px;
+	font-family:verdana, arial, helvetica, sans-serif;
+    font-size: 12px;
+	color:#333;
+	background-color:white;
+	background-repeat: repeat-x;
+}
+h1 {
+	padding:0px;
+	font-size:24px;
+	line-height:28px;
+	font-weight:normal;
+	color:#996633;
+	font-family: "Century Gothic", Arial;
+	text-decoration: none;
+	margin-top: 15px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	}
+#content h2 {
+	font-family: "Century Gothic", Arial;
+	font-size: 17px;
+	text-align: center;
+	display: block;
+	font-weight: bold;
+	color: #999900;
+	padding-right: 15px;
+	padding-left: 15px;
+	background-color: #EAECCD;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	border: 1px dashed #C0D490;
+}
+.footer {
+	background-image: url(/media/images/ramblingsoul3/footer.png);
+	background-repeat: repeat-x;
+	background-color: #D9EDA8;
+	padding-top: 20px;
+	padding-right: 25px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+}
+
+
+p {
+	margin:0px 0px 16px 0px;
+	padding:0px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 25px;
+	color:black;
+}
+li {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 25px;
+	color: black;
+}
+#content>p {
+    margin:0px;
+}
+#content>p+p {
+    text-indent:30px;
+}
+
+a {
+	color:#CC6600;
+	text-decoration:none;
+	font-weight:600;
+	font-family:verdana, arial, helvetica, sans-serif;
+}
+
+a:visited {
+    color:#07a;
+}
+#header #navigation li {
+	display: inline;
+}
+#header #navigation a {
+	background-image: url(/media/images/ramblingsoul3/menu.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 32px;
+	width: 102px;
+	margin-right: 5px;
+	padding-top: 10px;
+	text-align: center;
+	display: block;
+	color: #6B633F;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a:hover {}
+
+#header {
+	height:42px; 
+	line-height:11px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	height:42px;
+	background-image: url(/media/images/ramblingsoul3/topheadbg.png);
+	background-repeat: repeat-x;
+	padding-left: 200px;
+	}
+#header2 .logo {
+	background-image: url(/media/images/ramblingsoul3/logo.png);
+	float: left;
+	height: 40px;
+	width: 188px;
+	margin-left: 15px;
+	padding-top: 75px;
+	font-family: "Century Gothic", Arial, Verdana;
+	font-size: 24px;
+	text-align: center;
+	color: #999933;
+}
+#header2 .banner {
+	background-image: url(/media/images/ramblingsoul3/headbanner.png);
+	float: right;
+	height: 115px;
+	background-repeat: no-repeat;
+	width: 350px;
+	background-position: right;
+}
+#header2 .banner span {
+	margin-top: 75px;
+	display: block;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #B3A87C;
+}
+
+
+body>#header {height:42px;}
+blockquote p {
+	color: #CC6600;
+	line-height: 18px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.spacer {
+	clear: both;
+}
+
+#header2 {
+	background-image: url(/media/images/ramblingsoul3/header-bg.png);
+	background-repeat: repeat-x;
+	height: 115px;
+}
+body>#header2 {height:115px;}
+
+#content {
+	background-color: #FFFFFF;
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-left: 275px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+    min-height: 400px;
+	}
+#header a {
+	color: #993300;
+}
+
+
+#menu {
+	position:absolute;
+	top:82px;
+	left:20px;
+	width:210px;
+	line-height:25px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:210px;
+	margin-top: 86px;
+	font-size: 12px;
+	color: #339900;
+	padding-top: 15px;
+	padding-right: 10px;
+	padding-left: 10px;
+	}
+/* Again, "be nice to Opera 5". */
+body>#menu {width:210px;}
+#tabs {
+	font-size:93%;
+	line-height:normal;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	width: 700px;
+}
+
+#header #tabs .font {
+	display: block;
+	float: left;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+    #tabs ul {
+	margin:0;
+	list-style:none;
+	height: 42px;
+	padding-right: 5px;
+	padding-bottom: 0;
+	padding-left: 10px;
+	padding-top: 0px;
+	text-align: center;
+      }
+#header #tabs .font1 a {
+	font-family: "Century Gothic", Arial;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	display: block;
+	float: left;
+	height: 30px;
+	width: 53px;
+	padding-top: 13px;
+}
+#header #tabs .font2 a:hover {
+	color: #00CCFF;
+	background-color: #006699;
+}
+#header #tabs .font2 a {
+	font-family: "Century Gothic", Arial;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	display: block;
+	float: left;
+	height: 33px;
+	width: 53px;
+	padding-top: 10px;
+}
+#header #tabs .font3 a {
+	font-family: "Century Gothic", Arial;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	display: block;
+	height: 30px;
+	width: 53px;
+	padding-top: 10px;
+	float: left;
+}
+
+.activemenu {
+	background-image: url(/media/images/ramblingsoul3/dldoor.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #F0EEE0;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+	color: #4480C8;
+	font-weight: bold;
+}
+#header #tabs .activemenu a {
+	color: #A3B083;
+}
+
+
+#tabs li {
+	display:block;
+	margin-bottom: 0;
+	float: left;
+	padding-right: 5;
+	padding-bottom: 0;
+	padding-left: 5;
+	height: 28px;
+	padding-top: 10px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+#header #tabs li a {
+	padding-right: 5px;
+	padding-left: 5px;
+	color: #FFFFFF;
+	font-family: "Century Gothic", Arial;
+	font-size: 13px;
+	font-weight: bold;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+#header #tabs a:hover {
+	color: #006600;
+	text-decoration: none;
+}
+#mainright {
+	width:32%;
+	float:left;
+	padding-bottom:110px;
+	margin-top: 70px;
+	font-size: 14px;
+	margin-left: 5px;
+	background-image: url(/media/images/ramblingsoul3/mcbg.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+	
+#maincenter {
+	width:32%;
+	float:left;
+	padding-bottom:110px;
+	margin-top: 70px;
+	padding-right: 5px;
+	padding-left: 2px;
+	margin-left: 5px;
+	border-right-width: 1px;
+	border-right-style: dashed;
+	border-right-color: #A6B7CA;
+	background-image: url(/media/images/ramblingsoul3/webbg.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+		}
+	
+	#mainleft {
+	width:32%;
+	float:left;
+	padding-bottom:110px;
+	margin-top: 70px;
+	padding-right: 5px;
+	margin-left: 5px;
+	border-right-width: 1px;
+	border-right-style: dashed;
+	border-right-color: #A6B7CA;
+	background-image: url(/media/images/ramblingsoul3/swbg.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+		}
+	
+#banner {
+}
+
+#banner h1 {
+    margin:0px;
+    padding:10px;
+}
+
+#menu h2 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	display: block;
+	padding-left: 5px;
+	background-color: #F6F6EE;
+	color: #669933;
+	font-weight: normal;
+}
+#menu .submenu {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+li.submenu-item {
+	display: block;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #D8D3B9;
+}
+#menu .submenu a {
+	font-weight: normal;
+	color: #CC6633;
+}
+
+
+
+#header #tabs .font1 a:hover {
+	color: #00CCFF;
+	background-color: #006699;
+}
+#header #tabs .font3 a:hover {
+	color: #00CCFF;
+	background-color: #006699;
+}
+/*
+@font-face {
+    font-family: Century Gothic;
+    font-style:  normal;
+    font-weight: 700;
+    src: url(CENTURY3.eot);
+}
+@font-face {
+    font-family: Century Gothic;
+    font-style:  normal;
+    font-weight: normal;
+    src: url(CENTURY4.eot);
+}
+@font-face {
+    font-family: Verdana;
+    font-style:  normal;
+    font-weight: normal;
+    src: url(VERDANA0.eot);
+}
+@font-face {
+    font-family: Gunny Handwriting;
+    font-style:  normal;
+    font-weight: normal;
+    src: url(GUNNYHA1.eot);
+}
+*/
+#content blockquote {
+	margin: 10px;
+	color: #996633;
+	text-decoration: none;
+	font-size: 12px;
+	padding-left: 15px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	line-height: 18px;
+	background-color: #F1EFE2;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: justify;
+	padding-right: 10px;
+	border: 2px solid #ECE9D8;
+}
+#navigation {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#header #navigation a:hover {
+	background-image: url(/media/images/ramblingsoul3/menu-hvr.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 32px;
+	width: 102px;
+	margin-right: 5px;
+	padding-top: 10px;
+	text-align: center;
+	display: block;
+	color: #6B633F;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight: normal;
+	text-decoration: none;
+}
+#header #navigation .active a {
+
+	background-image: url(/media/images/ramblingsoul3/menu-hvr.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 32px;
+	width: 82px;
+	margin-right: 5px;
+	padding-top: 10px;
+	text-align: center;
+	display: block;
+	color: #6B633F;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight: normal;
+	text-decoration: none;
+}
+#menu .submenu a:visited,active {
+	font-weight: normal;
+	color: #CC6633;
+}
+#menu .submenu a:hover {
+	font-weight: normal;
+	color: #000000;
+	background-color: #F6F6EE;
+}

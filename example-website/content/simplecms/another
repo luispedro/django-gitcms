@@ -1,0 +1,13 @@
+title: Page in Subdirectory
+url: deeply/nested/url
+categories: somecategory
+..
+
+Page in Subdirectory
+====================
+
+Pages can be placed in subdirectories by their *url* property.
+
+It does not matter where the original data comes from!
+
+But if you want, you can use subdirectories for your own organisation.

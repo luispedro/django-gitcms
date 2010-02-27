@@ -1,0 +1,50 @@
+{% load simplemenu_tags %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% block head %}
+    <title>{% block title %}Luis Pedro Coelho{% endblock %}</title>
+    <meta name="author" content="Luis Pedro Coelho" />
+    <script type="text/javascript" src="/media/js/jquery.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href="/media/style/ramblingsoul3.css" rel="stylesheet" type="text/css" />
+    <link href="/media/style/rest.css" rel="stylesheet" type="text/css" />
+    {% endblock %}
+</head>
+
+
+<body>
+<div id="header">
+    {% block topbar %}
+        {% show_tabs "Top Menu" %}
+    {% endblock %}
+</div>
+<div id="header2">
+  <div class="logo">{% block logo %}example website{% endblock %}</div>
+  <div class="banner"><span>{% block tagline %}for you to learn&amp;c{% endblock %}</span></div>
+</div>
+
+{% autoescape off %}
+        <div id="content">
+            {% block content %}
+                My content
+            {% endblock %}
+        </div>
+{% endautoescape %}
+
+<div id="menu">
+  {% block sidebar %}
+    {% show_menu "Main Menu" %}
+  {% endblock %}
+</div>
+<div class="spacer">&nbsp;</div>
+<div class="footer">
+        {% block footer %}
+            Copyright (c) 2009-2010. Luis Pedro Coelho. All rights reserved.<br />
+            Website Graphical Design by : <a href="http://ramblingsoul.com">Rambling Soul</a>| <a href="http://validator.w3.org/check?uri=referer">XHTML 1.0</a> | CSS</p>
+        {% endblock %}
+</div>
+{% block bodyend %}
+{% endblock %}
+</body>
+</html>
