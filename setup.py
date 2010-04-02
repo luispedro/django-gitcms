@@ -14,6 +14,12 @@ setuptools not found. Please install it.
 On linux, the package is often called python-setuptools'''
     exit(1)
 
+requires = [
+    'pyyaml',
+    'poster',
+    'docutils',
+    ]
+
 long_description = '''\
 =======
 Git CMS
@@ -55,6 +61,7 @@ setuptools.setup(name = 'django-gitcms',
       package_data = package_data,
       scripts = ['bin/git-cms-load-content'],
       test_suite = 'nose.collector',
+      requires = requires,
       )
 
 
