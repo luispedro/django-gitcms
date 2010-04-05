@@ -31,6 +31,7 @@ def loaddir(directory, clear=False):
         fields, content = filecontent.split('\n---\n')
         fields = yaml.load(fields)
         fields['timestamp'] = parsedatetime(fields['timestamp'])
+        fields['year_month_slug'] = time.strftime('%%Y/%%B/%s' % fields['slug'], fields['timestamp'])
         fields['timestamp'] = time.strftime('%Y-%m-%d %H:%M', fields['timestamp'])
         fields['content'] = preprocess_rst_content(content)
         categories = fields.get('categories', '')
