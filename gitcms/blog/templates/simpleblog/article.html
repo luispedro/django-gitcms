@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block extra_head %}
+<meta name="keywords" content="{% for cat in article.categories.all %}{{ cat.name }}, {% endfor %}" />
+{% endblock %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %}
+{{ post.content }}
+
+<p>Post filed in categories:
+{% for tag in post.tags.all %}
+    <a href="/blog/tag/{{ tag.slug }}">{{ tag.name }}</a>
+{% endfor %}
+</p>
+{% endblock %}
