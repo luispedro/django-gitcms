@@ -15,7 +15,7 @@ On linux, the package is often called python-setuptools'''
     exit(1)
 
 requires = [
-    'django>=1.1',
+    'django',
     'pyyaml',
     'poster',
     'docutils',
