@@ -17,5 +17,10 @@ def tag_for(slug):
 
     Raises an exception if not found.
     '''
-    return Tag.objects.filter(slug=slug).all()[0]
+    tags = Tag.objects.filter(slug=slug).all()
+    if len(tags) == 1:
+        return tags[0]
+    if not tags:
+        raise ValueError("gitcms.simpletagging.tag_for: No tag for slug '%s'" % slug)
+    raise ValueError("gitcms.simpletagging.tag_for: Multiple tags for slug '%s' (%s)" % (slug, [t.name for t in tags]))
 
