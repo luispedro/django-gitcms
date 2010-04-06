@@ -49,7 +49,7 @@ def loaddir(directory, clear=False):
         while True:
             line = input.readline().strip()
             linenr += 1
-            if line == '..': break
+            if line in ('---', '..'): break
             tag,value = line.split(':',1)
             value = value.strip()
             header[tag] = value
@@ -59,7 +59,8 @@ def loaddir(directory, clear=False):
             raise IOError, 'Blank line expected while processing file (%s:%s)\nGot "%s"' % (artfile, linenr,blank)
         content = input.read()
         content = preprocess_rst_content(content)
-        A = Article(title=header['title'], url=header['url'], content=content)
+
+        A = Article(title=header['title'], url=header['url'], author=header.get('author', ''), content=content)
         A.save()
         for c in header.get('categories','').split():
             A.tags.add(tag_for(c))

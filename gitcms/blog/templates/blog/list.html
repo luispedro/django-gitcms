@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load markup %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+
+<h1>{{ pagetitle }}</h1>
+
+
+{% for post in posts %}
+    <div style="padding: 1em; background: #eee; border: 1px solid dashed">
+        <h2><a href="/blog/{{ post.year_month_slug }}">{{ post.title }}</a></h2>
+    
+        {% if reduced %}
+            {{ post.content|truncatewords_html:20 }}
+            <p style="text-align: right; padding-top: -1em;"><h2><a href="/blog/{{ post.year_month_slug }}">{{ post.title }}</a></p>
+        {% else %}
+            {{ post.content }}
+        {% endif %}
+    </div>
+
+    <div style="height: 5em; clear: both">
+    </div>
+{% endfor %}
+
+{% endblock %}
