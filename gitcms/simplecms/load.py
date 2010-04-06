@@ -35,7 +35,7 @@ def loaddir(directory, clear=False):
     while queue:
         artfile = queue.pop()
         if artfile[0] == '.': continue
-        if artfile in ('categories', 'template'): continue
+        if artfile in ('template', 'template.rst', 'template.txt'): continue
         artfile = path.join(directory, artfile)
         if path.isdir(artfile):
             queue.extend([
