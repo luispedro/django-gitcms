@@ -48,7 +48,7 @@ for subpackage in ('conferences', 'blog', 'simplecms', 'simplemenus', 'books', '
 
 
 setuptools.setup(name = 'django-gitcms',
-      version = '0.3.1',
+      version = '0.3.1-git',
       description = 'Django Git CMS: A django based git-backed content management system',
       long_description = long_description,
       author = 'Luis Pedro Coelho',
