@@ -9,6 +9,7 @@ class BlogPost(models.Model):
     tags = models.ManyToManyField(Tag)
     content = models.TextField(u'content')
     status = models.CharField(u'status', max_length=255)
+    author = models.CharField(u'author', max_length=255)
 
     year_month_slug = models.CharField(u'year_month_slug', max_length=255)
     def __unicode__(self):

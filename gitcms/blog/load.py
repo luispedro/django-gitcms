@@ -28,7 +28,10 @@ def loaddir(directory, clear=False):
             continue
 
         filecontent = file(next).read()
-        fields, content = filecontent.split('\n---\n')
+        parts = filecontent.split('\n---\n', 1)
+        fields, content = parts
+        if len(parts) != 2:
+            raise IOError('gitcms.blog.load: expected "---" separator in file %s' % next)
         fields = yaml.load(fields)
         fields['timestamp'] = parsedatetime(fields['timestamp'])
         fields['year_month_slug'] = time.strftime('%%Y/%%B/%s' % fields['slug'], fields['timestamp'])
