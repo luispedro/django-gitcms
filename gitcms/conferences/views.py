@@ -33,7 +33,6 @@ def upcomingical(request):
         if end is None:
             end = start
         rep = cal.add('vevent')
-        print 'SUMMARY:', summary
         rep.add('summary').value = summary
         rep.add('dtstart').value = start
         rep.add('dtend').value = end
