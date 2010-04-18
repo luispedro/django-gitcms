@@ -14,6 +14,8 @@ setuptools not found. Please install it.
 On linux, the package is often called python-setuptools'''
     exit(1)
 
+execfile('gitcms/gitcms_version.py')
+
 requires = [
     'django',
     'pyyaml',
@@ -48,7 +50,7 @@ for subpackage in ('conferences', 'blog', 'simplecms', 'simplemenus', 'books', '
 
 
 setuptools.setup(name = 'django-gitcms',
-      version = '0.3.1-git',
+      version = __version__,
       description = 'Django Git CMS: A django based git-backed content management system',
       long_description = long_description,
       author = 'Luis Pedro Coelho',
