@@ -4,12 +4,13 @@ import shutil
 import poster
 from poster.encode import multipart_encode
 from poster.streaminghttp import register_openers
+from django.conf import settings
 import urllib2
 import errno
 register_openers()
 
-_bibfilesdir = '../media/bibtex'
-_jsfilesdir = '../media/bibtex-json'
+_bibfilesdir = path.join(getattr(settings, 'MEDIA_ROOT',''), 'bibtex')
+_jsfilesdir =  path.join(getattr(settings, 'MEDIA_ROOT',''), 'bibtex-json')
 
 def _bibtex2json(bibtexfname):
     datagen, headers = multipart_encode({'file': file(bibtexfname) })
