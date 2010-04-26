@@ -1,5 +1,6 @@
 include example-website/*.py
 include example-website/README
+include README LICENSE ChangeLog
 recursive-include example-website/content *
 recursive-include example-website/media *
 recursive-include example-website/templates *
