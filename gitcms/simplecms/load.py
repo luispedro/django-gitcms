@@ -11,6 +11,7 @@ def loaddir(directory, clear=False):
         Article.objects.all().delete()
 
     queue = os.listdir(directory)
+    urls = set()
     while queue:
         artfile = queue.pop()
         if artfile[0] == '.': continue
@@ -39,7 +40,11 @@ def loaddir(directory, clear=False):
         content = input.read()
         content = preprocess_rst_content(content)
 
-        A = Article(title=header['title'], url=header['url'], author=header.get('author', ''), content=content)
+        url = header['url']
+        if url in urls:
+            raise IOError('gitcms.pages.loaddir: repeated URL detected (%s)' % url)
+        urls.add(url)
+        A = Article(title=header['title'], url=url, author=header.get('author', ''), content=content)
         A.save()
         for c in header.get('categories','').split():
             A.tags.add(tag_for(c))
