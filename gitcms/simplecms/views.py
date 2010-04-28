@@ -13,6 +13,7 @@ def bytag(request, tag):
                 })
 
 def article(request, url):
+    if len(url) and url[-1] == '/': url = url[:-1]
     article = get_object_or_404(Article, url=url)
     return render_to_response(
                 'simplecms/article.html',

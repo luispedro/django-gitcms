@@ -30,6 +30,8 @@ def loaddir(directory, clear=False):
             line = input.readline().strip()
             linenr += 1
             if line in ('---', '..'): break
+            if line.find(':') < 0:
+                raise IOError('gitcms.pages.load: In file %s, line %s. No \':\' found!' % (artfile, linenr))
             tag,value = line.split(':',1)
             value = value.strip()
             header[tag] = value
@@ -41,6 +43,15 @@ def loaddir(directory, clear=False):
         content = preprocess_rst_content(content)
 
         url = header['url']
+        if url and url[-1] == '/':
+            import warning
+            warning.warn('''\
+gitcms.pages.loaddir: Removing / at end of url (%s)
+
+(Both versions will work for accessing the page.)
+''' % url)
+            url = url[:-1]
+
         if url in urls:
             raise IOError('gitcms.pages.loaddir: repeated URL detected (%s)' % url)
         urls.add(url)
