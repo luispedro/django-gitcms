@@ -1,7 +1,10 @@
 import gitcms.simplemenus.load
 from gitcms.simplemenus.models import Menu, MenuItem
+from os.path import dirname
+
+_basedir = dirname(__file__)
 def test_simple_load():
-    simplemenus.load.loadfile('simplemenus/tests/data/menu.yaml') 
+    gitcms.simplemenus.load.loaddir(_basedir + '/data/') 
     assert len(Menu.objects.all())
     assert len(MenuItem.objects.all())
     menu = Menu.objects.all()[0]

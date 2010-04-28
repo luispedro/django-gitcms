@@ -14,3 +14,4 @@ class Conference(models.Model):
 
     def summary(self):
         return '%s (%s)' % (self.name, self.short_name)
+
