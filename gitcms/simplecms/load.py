@@ -54,11 +54,16 @@ gitcms.pages.loaddir: Removing / at end of url (%s)
 
         if url in urls:
             raise IOError('gitcms.pages.loaddir: repeated URL detected (%s)' % url)
+
+        taglist = []
+        for c in header.get('categories','').split():
+            taglist.append(tag_for(c))
+        # if we got so far, implies that our article is safe to store.
         urls.add(url)
         A = Article(title=header['title'], url=url, author=header.get('author', ''), content=content)
         A.save()
-        for c in header.get('categories','').split():
-            A.tags.add(tag_for(c))
+        for c in taglist:
+            A.tags.add(c)
 
 dependencies = ['simpletagging']
 

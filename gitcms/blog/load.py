@@ -39,11 +39,17 @@ def loaddir(directory, clear=False):
         fields['content'] = preprocess_rst_content(content)
         categories = fields.get('categories', '')
         if 'categories' in fields: del fields['categories']
-        P = BlogPost(**fields)
-        P.save()
+        ptags = []
         if categories:
             for c in categories.split():
-                P.tags.add(tag_for(c))
+                ptags.append(tag_for(c))
+        # if we arrived here and no errors, then it is safe
+        # to add our post.
+        #
+        P = BlogPost(**fields)
+        P.save()
+        for t in ptags:
+            P.tags.add(t)
 
 dependencies = ['simpletagging']
 

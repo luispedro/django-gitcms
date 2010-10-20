@@ -30,9 +30,12 @@ def loaddir(directory, clear=False):
         content = preprocess_rst_content(content)
         review_date = parsedate(header['review_date'])
         review_date = time.strftime('%Y-%m-%d', review_date)
+        btags = []
+        for c in header.get('tags','').split():
+            btags.append(tag_for(c))
         B = Book(slug=header['slug'], title=header['title'], booktitle=header['booktitle'], author=header['author'], content=content, review_date=review_date)
         B.save()
-        for c in header.get('tags','').split():
-            B.tags.add(tag_for(c))
+       for t in btags:
+           B.tags.add(t)
 
 dependencies = ['simpletagging']
