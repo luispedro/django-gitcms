@@ -6,7 +6,7 @@ children:
         url: /one
     -   name: Two
         url: /two
-    -   name: Django Gitcms
+    -   name: Gitcms
         url: http://luispedro.org/software/git-cms
 
 

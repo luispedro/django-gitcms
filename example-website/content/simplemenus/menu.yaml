@@ -1,18 +1,21 @@
 name: Main Menu
 children:
     -   name: One
-        url: /one
+        url: /
         children:
-        -   name: One
-            title: One Again
-            url: /one
-    -   name: Django Git CMS Stuff
+        -   name: Flat
+            title: about gitcms
+            url: /two
+        -   name: Nested
+            title: another page
+            url: /deeply/nested/url
+    -   name: External links
         url: http://luispedro.org/software/git-cms
         children:
         -   name: Home Page
             title: Project Home Page
             url: http://luispedro.org/software/git-cms
         -   name: Author's Webpage
-            title: Luis Pedro Coelhos's Webpage
+            title: Luis Pedro Coelho's Webpage
             url: http://luispedro.org/
 
