@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load disqus %}
 {% block extra_head %}
-<meta name="keywords" content="{% for cat in article.categories.all %}{{ cat.name }}, {% endfor %}" />
+    <meta name="keywords" content="{% for cat in article.categories.all %}{{ cat.name }}, {% endfor %}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feed" />
 {% endblock %}
 {% block title %}{{ post.title }}{% endblock %}
 {% block content %}
