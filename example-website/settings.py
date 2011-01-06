@@ -98,3 +98,4 @@ INSTALLED_APPS = (
 
 
 GITDJANGO_DIRNAME = './content'
+DISQUS_SHORTNAME='testing'
