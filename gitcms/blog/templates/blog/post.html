@@ -1,10 +1,13 @@
 {% extends "base.html" %}
+{% load disqus %}
 {% block extra_head %}
 <meta name="keywords" content="{% for cat in article.categories.all %}{{ cat.name }}, {% endfor %}" />
 {% endblock %}
 {% block title %}{{ post.title }}{% endblock %}
 {% block content %}
 {{ post.content }}
+
+{% disqus_thread post %}
 
 <p>Post filed in categories:
 {% for tag in post.tags.all %}
