@@ -35,7 +35,7 @@ def loaddir(directory, clear=False):
             btags.append(tag_for(c))
         B = Book(slug=header['slug'], title=header['title'], booktitle=header['booktitle'], author=header['author'], content=content, review_date=review_date)
         B.save()
-       for t in btags:
-           B.tags.add(t)
+        for t in btags:
+            B.tags.add(t)
 
 dependencies = ['simpletagging']
