@@ -14,6 +14,7 @@ def bytag(request, tag):
                 })
 
 def post(request, year, month, slug):
+    from os import path
     post = get_object_or_404(BlogPost, year_month_slug=path.join(year, month, slug))
     return render_to_response(
                 'blog/post.html',
