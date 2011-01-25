@@ -15,6 +15,13 @@ Edit the files in example-website. The format of the files should be pretty
 obvious. If not, check the corresponding load.py file (e.g., for
 example-website/simplecms/ check gitcms/simplecms/load.py).
 
+WHAT'S NEW
+----------
+
+**Version 0.3.6**
+- Add RSS for blog app
+- Add disqus integration for blog app
+
 BACKGROUND
 ----------
 

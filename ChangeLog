@@ -1,3 +1,7 @@
+version 0.3.6 2011-01-24 by <luis@luispedro.org>
+	* Add RSS for blog app
+	* Add disqus integration for blog app
+
 2010-04-25 luispedro <luis@luispedro.org>
 	* Remove references to BASE_URL from package.
 
