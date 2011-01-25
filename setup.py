@@ -23,16 +23,7 @@ requires = [
     'docutils',
     ]
 
-long_description = '''\
-=======
-Git CMS
-=======
-A content management system based on git
-----------------------------------------
-
-This is a simple content management system where all the data
-is stored in text files, making it easy to manage them with git.
-'''
+long_description = file('README').read()
 
 classifiers = [
     'Development Status :: 4 - Beta',
@@ -66,5 +57,4 @@ setuptools.setup(name = 'django-gitcms',
       test_suite = 'nose.collector',
       requires = requires,
       )
-
 
