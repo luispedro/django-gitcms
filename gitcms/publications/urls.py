@@ -4,8 +4,9 @@ import views
 
 
 urlpatterns = patterns('',
-    (r'^papers/(?P<paper>.+)$', views.papers),
-    (r'^publications/?$', views.publications, { 'collection' : 'luispedro' }),
-    (r'^publications/(?P<collection>.+)$', views.publications),
-    (r'^publications/files/(?P<file>.+)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT + '/publications/files'}),
+    url(r'^papers/(?P<paper>.+)$', views.papers, name='publications-paper'),
+    url(r'^publications/?$', views.publications, {'collection' : 'luispedro'}, name='publications'),
+    url(r'^publications/(?P<collection>.+)$', views.publications, name='publications-collection'),
+    url(r'^publications/files/(?P<file>.+)$', 'django.views.static.serve',
+        {'document_root': settings.MEDIA_ROOT + '/publications/files'}, name='publications-files'),
 )

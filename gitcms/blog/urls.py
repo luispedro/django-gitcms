@@ -3,8 +3,8 @@ import views
 import feeds
 
 urlpatterns = patterns('',
-    (r'^tag/(?P<tag>.*)/?', views.bytag),
-    (r'^(?P<year>[0-9]+)/(?P<month>[^/]*)/(?P<slug>[^/]*)/?', views.post),
-    (r'^feed/?', feeds.LatestFeed()),
-    (r'^/?', views.mostrecent),
+    url(r'^tag/(?P<tag>.*)/', views.bytag, name='blog-tag'),
+    url(r'^(?P<year>[0-9]+)/(?P<month>[0-9]+)/(?P<slug>[^/]*)/', views.post, name='blog-post'),
+    url(r'^feed/', feeds.LatestFeed(), name='blog-feed'),
+    url(r'^/', views.mostrecent, name='blog'),
 )

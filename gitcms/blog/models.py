@@ -10,7 +10,12 @@ class BlogPost(models.Model):
     content = models.TextField(u'content')
     status = models.CharField(u'status', max_length=255)
     author = models.CharField(u'author', max_length=255)
+    keywords = models.CharField(u'keywords', max_length=255)
+    description = models.CharField(u'description', max_length=255)
 
-    year_month_slug = models.CharField(u'year_month_slug', max_length=255)
     def __unicode__(self):
         return '%s (%s)' % (self.slug, self.title)
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('blog-post', [self.timestamp.year, self.timestamp.month, self.slug])
