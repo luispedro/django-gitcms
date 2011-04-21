@@ -1,13 +1,19 @@
 from django.contrib.syndication.views import Feed
 from gitcms.blog.models import BlogPost
+from django.conf import settings
+
 
 class LatestFeed(Feed):
-    title = 'pythonvision.org blog feed'
-    link = '/blog/feed'
-    description = 'Updates on pythonvision.org and items of interest for computer vision in Python'
+    title = 'Blog RSS channel'
+    link = '/rss/'
+    description = 'Updates on blog and items of interesting content'
 
     def items(self):
-        return BlogPost.objects.order_by('-timestamp')[:20]
+        try:
+            limit = settings.LIMIT_RSS_ITEMS
+        except:
+            limit = 20
+        return BlogPost.objects.order_by('-timestamp')[:limit]
 
     def item_title(self, post):
         return post.title
@@ -16,4 +22,4 @@ class LatestFeed(Feed):
         return post.content
 
     def item_link(self, post):
-        return '/blog/' + post.year_month_slug
+        return post.get_absolute_url()
