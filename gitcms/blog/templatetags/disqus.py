@@ -1,7 +1,4 @@
 from django import template
-from django.template import Template, Context, Node, Variable
-from django.template.defaultfilters import stringfilter
-from django.utils.safestring import mark_safe
 import settings
 
 register = template.Library()

@@ -1,6 +1,5 @@
 from models import BlogPost
-import os
-from os import path
+from os import path, listdir
 import yaml
 import time
 from docutils.core import publish_parts
@@ -11,11 +10,12 @@ from gitcms.parsedate import parsedatetime
 from gitcms.pages.load import preprocess_rst_content
 from gitcms.tagging.models import tag_for
 
+
 def loaddir(directory, clear=False):
     if clear:
         BlogPost.objects.all().delete()
 
-    queue = os.listdir(directory)
+    queue = listdir(directory)
     while queue:
         next = queue.pop()
         if next[0] == '.': continue
@@ -23,7 +23,7 @@ def loaddir(directory, clear=False):
         next = path.join(directory, next)
         if path.isdir(next):
             queue.extend([
-                path.join(next,f) for f in os.listdir(next)
+                path.join(next,f) for f in listdir(next)
                 ])
             continue
 
@@ -49,4 +49,3 @@ def loaddir(directory, clear=False):
             P.tags.add(t)
 
 dependencies = ['tagging']
-

@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as tr
 from gitcms.tagging.models import Tag
 
+
 class BlogPost(models.Model):
     title = models.CharField(u'title', max_length=255)
     slug = models.CharField(u'slug', max_length=255)

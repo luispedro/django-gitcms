@@ -2,12 +2,11 @@
 {% load markup %}
 {% block title %}{{ title }}{% endblock %}
 {% block extra_head %}
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feed" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url blog-feed %}" />
 {% endblock %}
 {% block content %}
 
 <h1>{{ pagetitle }}</h1>
-
 
 {% for post in posts %}
     <div style="padding: 1em; background: #eee; border: 1px solid dashed">
@@ -24,5 +23,4 @@
     <div style="height: 5em; clear: both">
     </div>
 {% endfor %}
-
 {% endblock %}
