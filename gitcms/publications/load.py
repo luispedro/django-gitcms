@@ -1,7 +1,6 @@
 import os
 from os import path
 import shutil
-import poster
 from poster.encode import multipart_encode
 from poster.streaminghttp import register_openers
 from django.conf import settings
@@ -45,6 +44,3 @@ def loaddir(directory, clear=False):
         jsonfile = file(jsonfile, 'w')
         jsonfile.write(_bibtex2json(path.join(directory,bibfile)))
         jsonfile.close()
-
-
-
