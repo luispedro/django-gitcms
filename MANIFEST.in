@@ -4,4 +4,4 @@ include README LICENSE ChangeLog
 recursive-include example-website/content *
 recursive-include example-website/media *
 recursive-include example-website/templates *
-recursive-include gitcms/ *.html
+recursive-include gitcms *.html
