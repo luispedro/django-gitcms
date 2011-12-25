@@ -35,7 +35,7 @@ classifiers = [
 
 package_dir = {}
 package_data = {}
-for subpackage in ('conferences', 'blog', 'simplecms', 'simplemenus', 'books', 'publications'):
+for subpackage in ('conferences', 'blog', 'pages', 'menus', 'books', 'publications'):
     package_dir['gitcms.' + subpackage] = 'gitcms/' + subpackage
     package_data['gitcms.' + subpackage] = ['templates/%s/*.html' % subpackage]
 

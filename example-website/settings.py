@@ -85,9 +85,9 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.markup',
 
-    'gitcms.simpletagging',
-    'gitcms.simplecms',
-    'gitcms.simplemenus',
+    'gitcms.tagging',
+    'gitcms.pages',
+    'gitcms.menus',
     'gitcms.blog',
     'gitcms.books',
     'gitcms.conferences',

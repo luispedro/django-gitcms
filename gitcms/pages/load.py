@@ -3,7 +3,7 @@ import os
 from os import path
 import yaml
 from django.conf import settings
-from gitcms.simpletagging.models import tag_for
+from gitcms.tagging.models import tag_for
 from .rest import preprocess_rst_content
 
 def loaddir(directory, clear=False):
@@ -65,5 +65,5 @@ gitcms.pages.loaddir: Removing / at end of url (%s)
         for c in taglist:
             A.tags.add(c)
 
-dependencies = ['simpletagging']
+dependencies = ['tagging']
 

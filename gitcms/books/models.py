@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as tr
-from gitcms.simpletagging.models import Tag
+from gitcms.tagging.models import Tag
 
 class Book(models.Model):
     slug = models.SlugField(u'slug')

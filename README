@@ -13,7 +13,7 @@ I assume that you know django. If not, check the django website.
 
 Edit the files in example-website. The format of the files should be pretty
 obvious. If not, check the corresponding load.py file (e.g., for
-example-website/simplecms/ check gitcms/simplecms/load.py).
+example-website/pages/ check gitcms/pages/load.py).
 
 WHAT'S NEW
 ----------

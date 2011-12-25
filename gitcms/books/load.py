@@ -5,8 +5,8 @@ import yaml
 import time
 
 from gitcms.parsedate import parsedate
-from gitcms.simplecms.load import preprocess_rst_content
-from gitcms.simpletagging.models import tag_for
+from gitcms.pages.load import preprocess_rst_content
+from gitcms.tagging.models import tag_for
 
 def loaddir(directory, clear=False):
     if clear:
@@ -38,4 +38,4 @@ def loaddir(directory, clear=False):
         for t in btags:
             B.tags.add(t)
 
-dependencies = ['simpletagging']
+dependencies = ['tagging']

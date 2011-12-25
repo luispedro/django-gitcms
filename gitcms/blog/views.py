@@ -1,4 +1,4 @@
-from gitcms.simpletagging.models import Tag
+from gitcms.tagging.models import Tag
 from gitcms.blog.models import BlogPost
 from django.shortcuts import get_object_or_404, render_to_response
 

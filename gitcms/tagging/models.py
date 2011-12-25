@@ -21,6 +21,6 @@ def tag_for(slug):
     if len(tags) == 1:
         return tags[0]
     if not tags:
-        raise ValueError("gitcms.simpletagging.tag_for: No tag for slug '%s'" % slug)
-    raise ValueError("gitcms.simpletagging.tag_for: Multiple tags for slug '%s' (%s)" % (slug, [t.name for t in tags]))
+        raise ValueError("gitcms.tagging.tag_for: No tag for slug '%s'" % slug)
+    raise ValueError("gitcms.tagging.tag_for: Multiple tags for slug '%s' (%s)" % (slug, [t.name for t in tags]))
 

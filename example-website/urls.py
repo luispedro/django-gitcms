@@ -1,7 +1,7 @@
 import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
-import gitcms.simplecms.urls
+import gitcms.pages.urls
 import gitcms.files.urls
 import gitcms.blog.urls
 admin.autodiscover()
@@ -12,5 +12,5 @@ urlpatterns = patterns('',
     (r'^blog/?', include(gitcms.blog.urls)),
 )
 urlpatterns += gitcms.files.urls.urlpatterns
-urlpatterns += gitcms.simplecms.urls.urlpatterns
+urlpatterns += gitcms.pages.urls.urlpatterns
 

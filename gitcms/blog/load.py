@@ -8,8 +8,8 @@ from django.utils.encoding import smart_str, force_unicode
 from django.utils.safestring import mark_safe
 
 from gitcms.parsedate import parsedatetime
-from gitcms.simplecms.load import preprocess_rst_content
-from gitcms.simpletagging.models import tag_for
+from gitcms.pages.load import preprocess_rst_content
+from gitcms.tagging.models import tag_for
 
 def loaddir(directory, clear=False):
     if clear:
@@ -51,5 +51,5 @@ def loaddir(directory, clear=False):
         for t in ptags:
             P.tags.add(t)
 
-dependencies = ['simpletagging']
+dependencies = ['tagging']
 
