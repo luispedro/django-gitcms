@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404, render_to_response
 
 def bytag(request, tag):
     tag = get_object_or_404(Tag, slug=tag)
-    posts = BlogPost.objects.filter(tags=tag).order_by('-timestamp')
+    posts = BlogPost.objects.exclude(status='draft').filter(tags=tag).order_by('-timestamp')
     return render_to_response(
                 'blog/list.html',
                 {
@@ -23,7 +23,7 @@ def post(request, year, month, slug):
                 })
 
 def mostrecent(request):
-    posts = BlogPost.objects.order_by('-timestamp')
+    posts = BlogPost.objects.exclude(status='draft').order_by('-timestamp')
     return render_to_response(
                 'blog/list.html',
                 {
