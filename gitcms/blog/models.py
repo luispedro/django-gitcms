@@ -13,4 +13,4 @@ class BlogPost(models.Model):
 
     year_month_slug = models.CharField(u'year_month_slug', max_length=255)
     def __unicode__(self):
-        return '%s (%s)' % (self.title)
+        return '%s (%s)' % (self.slug, self.title)
