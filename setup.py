@@ -23,7 +23,7 @@ requires = [
     'docutils',
     ]
 
-long_description = file('README').read()
+long_description = file('README.rst').read()
 
 classifiers = [
     'Development Status :: 4 - Beta',
