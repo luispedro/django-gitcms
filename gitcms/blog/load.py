@@ -34,6 +34,8 @@ def loaddir(directory, clear=False):
             raise IOError('gitcms.blog.load: expected "---" separator in file %s' % next)
         fields = yaml.load(fields)
         fields['content'] = preprocess_rst_content(content)
+        fields['timestamp'] = parsedatetime(fields['timestamp'])
+        fields['timestamp'] = time.strftime('%Y-%m-%d %H:%M', fields['timestamp'])
         categories = fields.get('categories', '')
         if 'categories' in fields: del fields['categories']
         ptags = []
