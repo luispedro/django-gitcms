@@ -4,7 +4,7 @@ from django.conf import settings
 
 
 class LatestFeed(Feed):
-    title = 'Blog RSS channel'
+    title = getattr(settings, 'GITCMS_BLOG_FEED_NAME', 'Blog RSS channel')
     link = '/rss/'
     description = 'Updates on blog and items of interesting content'
 
