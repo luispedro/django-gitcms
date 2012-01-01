@@ -19,8 +19,8 @@ execfile('gitcms/gitcms_version.py')
 requires = [
     'django',
     'pyyaml',
-    'poster',
     'docutils',
+    'pygments',
     ]
 
 long_description = file('README.rst').read()
