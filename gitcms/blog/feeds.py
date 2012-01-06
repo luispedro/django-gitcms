@@ -9,11 +9,8 @@ class LatestFeed(Feed):
     description = 'Updates on blog and items of interesting content'
 
     def items(self):
-        try:
-            limit = settings.LIMIT_RSS_ITEMS
-        except:
-            limit = 20
-        return BlogPost.objects.order_by('-timestamp')[:limit]
+        limit = getattr(settings, 'LIMIT_RSS_ITEMS', 20)
+        return BlogPost.objects.exclude(status='draft').order_by('-timestamp')[:limit]
 
     def item_title(self, post):
         return post.title
