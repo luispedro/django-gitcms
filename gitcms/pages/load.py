@@ -44,8 +44,8 @@ def loaddir(directory, clear=False):
 
         url = header['url']
         if url and url[-1] == '/':
-            import warning
-            warning.warn('''\
+            import warnings
+            warnings.warn('''\
 gitcms.pages.loaddir: Removing / at end of url (%s)
 
 (Both versions will work for accessing the page.)
