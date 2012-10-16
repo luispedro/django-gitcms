@@ -52,6 +52,12 @@ gitcms.pages.loaddir: Removing / at end of url (%s)
 ''' % url)
             url = url[:-1]
 
+        if url and url[0] == '/':
+            import warnings
+            warnings.warn('gitcms.pages.loaddir: Removing / at start of url ({0})'
+                        .format(url))
+            url = url[1:]
+
         if url in urls:
             raise IOError('gitcms.pages.loaddir: repeated URL detected (%s)' % url)
 
