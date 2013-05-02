@@ -5,6 +5,7 @@ from gitcms.tagging.models import Tag
 class Article(models.Model):
     title = models.CharField(u'title', max_length=255)
     url = models.CharField(u'url', max_length=255)
+    meta = models.TextField(u'meta')
     author = models.TextField(u'author', max_length=255)
     tags = models.ManyToManyField(Tag)
     content = models.TextField(u'content')

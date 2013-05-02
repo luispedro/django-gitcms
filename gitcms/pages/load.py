@@ -66,7 +66,7 @@ gitcms.pages.loaddir: Removing / at end of url (%s)
             taglist.append(tag_for(c))
         # if we got so far, implies that our article is safe to store.
         urls.add(url)
-        A = Article(title=header['title'], url=url, author=header.get('author', ''), content=content)
+        A = Article(title=header['title'], url=url, meta=header.get('meta', ''), author=header.get('author', ''), content=content)
         A.save()
         for c in taglist:
             A.tags.add(c)
