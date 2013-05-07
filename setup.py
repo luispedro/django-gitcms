@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 2008-2010, Luis Pedro Coelho <lpc@cmu.edu>
+# Copyright (C) 2008-2013, Luis Pedro Coelho <luis@luispedro.org>
 # vim: set ts=4 sts=4 sw=4 expandtab smartindent:
 # Licence : Affero GPL v3 or later
 
@@ -45,7 +45,7 @@ setuptools.setup(name = 'django-gitcms',
       description = 'Django Git CMS: A django based git-backed content management system',
       long_description = long_description,
       author = 'Luis Pedro Coelho',
-      author_email = 'lpc@cmu.edu',
+      author_email = 'luis@luispedro.org',
       license = 'MIT',
       platforms = ['Any'],
       classifiers = classifiers,
