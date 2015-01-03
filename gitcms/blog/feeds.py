@@ -20,3 +20,6 @@ class LatestFeed(Feed):
 
     def item_link(self, post):
         return post.get_absolute_url()
+
+    def item_pubdate(self, post):
+        return post.timestamp
