@@ -1,8 +1,6 @@
-from models import Article
+from .models import Article
 import os
 from os import path
-import yaml
-from django.conf import settings
 from gitcms.tagging.models import tag_for
 from .rest import preprocess_rst_content
 
@@ -23,7 +21,7 @@ def loaddir(directory, clear=False):
                 ])
             continue
 
-        input = file(artfile)
+        input = open(artfile)
         header = {}
         linenr = 0
         while True:
@@ -38,7 +36,7 @@ def loaddir(directory, clear=False):
         blank = input.readline()
         linenr += 1
         if blank.strip():
-            raise IOError, 'Blank line expected while processing file (%s:%s)\nGot "%s"' % (artfile, linenr,blank)
+            raise IOError('Blank line expected while processing file (%s:%s)\nGot "%s"' % (artfile, linenr,blank))
         content = input.read()
         content = preprocess_rst_content(content)
 

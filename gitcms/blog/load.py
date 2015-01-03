@@ -1,10 +1,7 @@
-from models import BlogPost
+from .models import BlogPost
 from os import path, listdir
 import yaml
 import time
-from docutils.core import publish_parts
-from django.utils.encoding import smart_str, force_unicode
-from django.utils.safestring import mark_safe
 
 from gitcms.parsedate import parsedatetime
 from gitcms.pages.load import preprocess_rst_content
@@ -27,7 +24,7 @@ def loaddir(directory, clear=False):
                 ])
             continue
 
-        filecontent = file(next).read()
+        filecontent = open(next).read()
         parts = filecontent.split('\n---\n', 1)
         if len(parts) != 2:
             raise IOError('gitcms.blog.load: expected "---" separator in file %s' % next)

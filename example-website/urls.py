@@ -1,5 +1,5 @@
-import settings
-from django.conf.urls.defaults import *
+from . import settings
+from django.conf.urls import patterns, url, include
 from django.contrib import admin
 import gitcms.pages.urls
 import gitcms.files.urls

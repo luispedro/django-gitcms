@@ -3,18 +3,19 @@
 # vim: set ts=4 sts=4 sw=4 expandtab smartindent:
 # Licence : Affero GPL v3 or later
 
-from __future__ import division
+
 from sys import exit
 try:
     import setuptools
 except:
-    print '''
+    print('''
 setuptools not found. Please install it.
 
-On linux, the package is often called python-setuptools'''
+On linux, the package is often called python-setuptools''')
     exit(1)
 
-execfile('gitcms/gitcms_version.py')
+exec(compile(open('gitcms/gitcms_version.py').read(),
+             'gitcms/gitcms_version.py', 'exec'))
 
 requires = [
     'django',
@@ -23,7 +24,7 @@ requires = [
     'pygments',
     ]
 
-long_description = file('README.rst').read()
+long_description = open('README.rst').read()
 
 classifiers = [
     'Development Status :: 4 - Beta',

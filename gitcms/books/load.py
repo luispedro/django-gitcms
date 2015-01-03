@@ -1,4 +1,4 @@
-from models import Book
+from .models import Book
 import os
 from os import path
 import yaml

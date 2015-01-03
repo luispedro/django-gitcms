@@ -1,4 +1,4 @@
-from models import Menu, MenuItem
+from .models import Menu, MenuItem
 import os
 from os import path
 import yaml
@@ -16,7 +16,7 @@ def loaddir(directory, clear=False):
             _parse_children(ch, child)
     for menufile in os.listdir(directory):
         if menufile[0] == '.': continue
-        for menu in yaml.load_all(file(path.join(directory,menufile))):
+        for menu in yaml.load_all(open(path.join(directory,menufile))):
             fake_root = MenuItem(name='<fake-root>', url='fake-root-you-shouldnt-be-seeing-this-bro')
             fake_root.save()
             menu_obj = Menu(name=menu['name'], fake_root=fake_root)
