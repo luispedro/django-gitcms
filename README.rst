@@ -4,6 +4,10 @@ Git CMS
 Git Based Content Management
 ----------------------------
 
+**DEPRECATED**: This project is no longer maintained. There are a lot of good
+alternatives nowadays. Use those.
+
+
 This is a simple way to allow git to store information related to a website.
 
 USAGE
